@@ -1,0 +1,435 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.header_1{
+    padding: 10px 20px;
+    background: rgb(90, 186, 224);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_2{
+    padding: 25px 25px 5px 25px;
+}
+.logoSalud{
+    transition: 3s;
+    width: 150px;
+     /*animacion de movimiento*/
+}
+@keyframes movimiento{
+    0%{transform: translate(0rem) rotate(0deg);}
+    30%{transform: translate(1rem) rotate(15deg);}
+    60%{transform: translate(-1rem) rotate(-15deg);}
+    100%{transform: translate(0rem) rotate(0deg);}
+}
+@keyframes parada{
+
+}
+.blanco2{
+    font-size: 25px;
+    font-family: monospace;
+}
+/*--------Navegador---------*/
+.navegador{
+    padding: 25px 0 5px 0;
+}
+.menu{
+    padding: 20px 10px;
+    display: flex;
+    background-color: rgb(241, 241, 241);
+}
+.menu li{
+    width:20%;
+    list-style: none;
+}
+
+.menu a{
+    transition: 0.6s;
+    text-decoration: none;
+    text-align: center;
+    display:block;
+    padding: 10px;
+}
+.menu .otros{
+    color: rgb(40,86,152);
+}
+.inicio{
+    background-color: rgb(40,86,152);
+    color: aliceblue;
+}
+.menu a:hover{
+    background-color: rgb(40,86,152);
+    color: aliceblue;
+}
+/*-----Slider-----*/
+.container_slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.grupo_imagenes{
+    display: flex;
+    width: 100%;
+}
+.div_imagen{
+    width: 100%;
+}
+.imagenes{
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover; /*para que no se estiren*/
+}
+.flecha{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: monospace;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.flecha:hover{
+    background: rgb(40,86,152);
+    color: white;
+}
+.flechaDerecha{
+    right:20px;
+}
+.flechaIzquierda{
+    left:20px;
+}
+/* Muñon
+.muñones{
+    display: flex;
+    justify-content: center;
+}
+.muñon{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}*/
+.btn{
+    text-align: center;
+    margin:10px;
+}
+.btn li{
+    display:inline-block;
+    text-align: center;
+    list-style: none;
+}
+.btn a{
+    text-decoration: none;
+    text-align: center;
+    display:block;
+    font-size: 25px;
+    padding:8px;
+    width: 45px;
+    height: 45px;
+    color: white;
+    background: rgb(40,86,152);
+    border-radius: 50%;
+}
+.btn a:hover{
+    background-color: rgb(197, 197, 197);
+    color:rgb(40,86,152);
+}
+/* Footer */
+footer{
+    margin: 25px 0 0 0;
+    background-color: rgb(40,86,152);
+}
+.box_footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 25px 50px 25px;
+    justify-content:center;
+}
+footer p{
+    color: white;
+}
+.parrafo{
+    text-align: center;
+}
+footer .imgGob{
+    width: 200px;
+    margin: 0 0 15px 0;
+}
+.cajas1 ,.cajas2, .cajas3{
+    padding: 30px;
+}
+.cajas2, .cajas3{
+    border-left: solid 2px rgb(21, 45, 80);
+}
+.imgBice{
+    width: 200px;
+    margin: 0 0 15px 0;
+    transition: 1s;
+}
+.cajas4{
+    margin: 15px ;
+    display: flex;
+    justify-content:center;
+}
+.imgLogo{
+    width:55px;
+    transition: 1s;
+    transform: rotate(0deg);
+}
+
+/* Main */
+.consejos{
+    margin: 30px 0;
+}
+.titulo{
+    margin: 20px;
+}
+.consejos h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: 150;
+    color: rgb(100, 100, 100);
+    font-size: 28px;
+}
+.grupoConsejos{
+    margin: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative; /* para modal */
+    cursor: pointer;
+}
+.boxImg{
+    width:320px;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.imgConsejo{
+    width: 320px;
+    transition: 1s;
+}
+.consejo{
+    display:flex;
+    width:320px;
+    margin: 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+}
+.consejo1h3{
+    transition: 0.3s;
+    padding: 4px 0;
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    background: rgb(22, 47, 82);
+    font-size: 18px;
+    border-radius: 10px;
+}
+.consejo1 p{
+    color:rgb(100, 100, 100);
+    font-size: 18px;
+}
+/* ampliacion de imagenes */
+.consejo_ampliado{
+    display: none;
+    width: 100%;
+    height: 100%;
+    border:indigo 1px solid;
+    position:fixed;
+    overflow: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+    background: rgba(116, 77, 77, 0.452);
+    
+
+}
+.contenido_modal{
+    width: 700px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    background-color: aliceblue;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+    animation-name:modal;
+}
+@keyframes modal{
+	from{top:-330px; opacity:0;}
+	to{top:0; opacity:1;}
+}
+.consejo_ampliado img{
+    width: 700px;
+}
+
+.consejo_ampliado_titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(22, 47, 82);
+}
+.consejo_ampliado_titulo h2{
+    color: aliceblue;
+}
+.consejo_ampliado_titulo span{
+    font-size: 30px;
+    background-color: aliceblue;
+    width: 30px;
+    height:30px;
+    text-align: center;
+    border-radius: 50%;
+}
+.consejo_ampliado_titulo span:hover{
+    background-color: rgb(94, 94, 94);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+/* Boton de Vacuna */
+.header_salud_vacuna{
+    display: flex;
+    justify-content:space-between;
+}
+.boton_vacuna{
+    margin-right: 25px;
+    display: flex;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(138, 64, 64);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    transition: .5s;
+    cursor: pointer;
+}
+#logoVacuna{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    transition: .5s;
+}
+.boton_vacuna p{
+    font-size: 25px;
+    color: aliceblue;
+}
+.boton_vacuna:hover{
+    background-color: rgb(54, 89, 138);
+}
+
+/* Modal Vacuna */
+
+.modal_vacuna{
+    display: none;
+    width: 100%;
+    height: 100%;
+    border:indigo 1px solid;
+    position:fixed;
+    overflow: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+    background: rgba(116, 77, 77, 0.452);
+    
+
+}
+.contenido_modal_vacuna{
+    width: 700px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    background-color: aliceblue;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+    animation-name:modalVacuna;
+}
+@keyframes modalVacuna{
+	from{top:-330px; opacity:0;}
+	to{top:0; opacity:1;}
+}
+.modal_vacuna_titulo{
+    background-color: red;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal_vacuna_titulo span{
+    margin-right: 5px;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(54, 89, 138);
+    text-align: center;
+    border-radius: 50%;
+    color: aliceblue;
+    cursor: pointer;
+}
+.logoModal1{
+    width: 200px;
+}
+.modal_vacuna_titulo span:hover{
+    background-color:  rgb(61, 25, 25);
+}
+
+.modal_vacuna_subtitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+.modal_vacuna_subtitulo p{
+    font-size: 25px;
+} 
+.logoModal2{
+    width: 300px;
+}
+
+/* Formulario Modal Vacuna */
+
+form{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+form div{
+    margin: 10px 0;
+}
+form div label{
+    display: inline-block;
+    width: 250px;
+}
+form input, select{
+    padding: 5px;
+}
+.botonConsultar{
+    margin-left: 250px;
+    padding: 5px 30px;
+}
+.respuestaFallida{
+    color: rgb(107, 60, 60);
+    text-align: center;
+}
+.respuestaValida{
+    padding: 30px;
+    background-color: rgb(207, 207, 207);
+    margin-bottom: 40px;
+    text-align: center;
+    color: rgb(54, 89, 138);
+}
+.derechosReservados{
+    padding: 20px;
+    background-color: rgb(54, 89, 138);
+}

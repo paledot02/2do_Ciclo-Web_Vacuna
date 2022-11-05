@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estiloPrincipal.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+
+            <div class="header_1">
+                <div >
+                    <p class="blanco1">Para consultas o sugerencias : <br> Cel. 987867877 / 987678765</p>
+                </div>
+                <div class="a2">
+                    <p class="blanco2">Fecha y Hora Actual</p>
+                </div>
+            </div > 
+
+        </header>
+
+        <nav class= "header_2">
+            <div class = "header_salud_vacuna">
+                <div class="logo">
+                    <img src="img/Logo0.png" class="logoSalud" onmouseover="vaiven()" onmouseout="noVaiven()">
+                </div>
+                <div class="boton_vacuna" onmouseover="girarVacuna()" onmouseout="originalVacuna()">
+                    <img src="img/iconoVacuna.png" alt="vacuna" id="logoVacuna">
+                    <p>Consulta el Padrón</p>
+                </div>
+                <!--Modal Vacuna-->
+                <div class="modal_vacuna">
+                    <div class="contenido_modal_vacuna">
+                        <div class="modal_vacuna_titulo">
+                            <img src="img/Logo1.png" alt="logo2" class="logoModal1">
+                            <span class="desaparecer" id="desaparecer">&times;</span>
+                        </div>
+                        <div class="modal_vacuna_subtitulo">
+                            <img src="img/Logo2.png" alt="logo2" class="logoModal2">
+                            <p>Consulta única del padrón de vacuna contra la COVID-19</p>
+                        </div>
+                        
+                        <!-- Formulario Modal -->
+                        
+                        
+                        <form>
+                            <div>
+                                <p>Ingresa tus datos para saber si estás en el padrón:</p>
+                            </div>
+                            <div>
+                                <label for="dni">Numero de Dni: </label>
+                                <input type="number" name="dni" id="dni" required>
+                            </div>
+                            <div>
+                                <label for="edad">Edad Actual: </label>
+                                <input type="number" name="edad" id="edad" required>
+                            </div>
+                            <div>
+                                <label for="lugar">Distrito de Residencia</label>
+                                <select name="lugar" id="lugar">
+                                    <option value="Independencia">Independencia</option>
+                                    <option value="Cercado de Lima">Cercado de Lima</option>
+                                    <option value="Lince">Lince</option>
+                                </select><br>
+                            </div>
+                            <div>
+                                <input type="button" value="Consultar" class="botonConsultar" onclick="validar()">
+                            </div>
+
+                        </form>
+
+                        <div class="respuestaFallida"></div>
+                        <div class="respuestaValida"></div>
+                        <div class="derechosReservados"></div>
+
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="navegador">
+                <ul class="menu">
+                    <li><a href="#" class="inicio">Inicio</a></li>
+                    <li><a href="http://portal.essalud.gob.pe/index.php/nuestra-historia/" class= "otros">Nosotros</a></li>
+                    <li><a href="https://www.gob.pe/coronavirus" class= "otros">Coronavirus (COVID-19)</a></li>
+                    <li><a href="https://gestion.pe/noticias/vacuna/" class= "otros">Noticias</a></li>
+                    <li><a href="https://www.gob.pe/13310-coronavirus-recomendaciones-para-ir-a-vacunarte-contra-la-covid-19" class= "otros">Recomendaciones</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <section>
+            <div class= "container_slider">
+
+                <div class= "grupo_imagenes">
+                    <div class="div_imagen">
+                        <img src="img/Banner1.png" alt="Banner1" class="imagenes" >
+                    </div>
+                    <!--
+                    <div class="div_imagen">
+                        <img src="img/Banner2.png" alt="banner2" class="imagenes">
+                    </div>
+                    <div class="div_imagen">
+                        <img src="img/Banner3.jpg" alt="banner3" class="imagenes">
+                    </div>
+                -->
+                </div>
+
+                <div class="flechaDerecha flecha" onclick="adelante()">&#62;</div>
+                <div class="flechaIzquierda flecha" onclick="atras()">&#60;</div>
+
+            </div>
+
+            <div class="rotarBotones">
+                
+                <ul class="btn">
+                    <li><a href="#" onclick="img1()">1</a></li>
+                    <li><a href="#" onclick="img2()">2</a></li>
+                    <li><a href="#" onclick="img3()">3</a></li>
+                    
+                </ul>
+                
+            </div>
+
+
+
+            <div class="nameee"></div>
+        </section>
+
+        <section class="consejos">
+            <div class="titulo">
+                <h1>Consejos para cuidarte Durante la Pandemia</h1>
+            </div>
+
+            <div class="grupoConsejos">
+                <div class="consejo" onmouseover="ampliarConsejo()" onmouseout="reducironsejo()">
+                    <div>
+                        <div class="boxImg">
+                            <img src="img/Recomendacion1.jpg" alt="recomendacion" class="imgConsejo">
+                        </div>
+                        <h3 class="consejo1h3">Actvidad fisica para escolares</h3><br>
+                        <p>La importancia de la alimentacion en la etapa escolar ¿Cómo debe ser el refrigerio escolar durante las clases virtuales?</p>
+                    </div>
+                </div>
+
+                <div class="consejo_ampliado">
+                    <div class="contenido_modal">
+                        <div class="consejo_ampliado_titulo">
+                            <h2>Consejos para Cuidarte Durante la Pandemia</h2>
+                            <span class="close" id="close">&times;</span>
+                        </div>
+                        <div>
+                            <img src="img/Recomendacion1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consejo" onmouseover="ampliarConsejo1()" onmouseout="reducironsejo1()">
+                    <div>
+                        <div class="boxImg">
+                            <img src="img/Recomendacion3.jpg" alt="recomendacion" class="imgConsejo">
+                        </div>
+                        <h3 class="consejo1h3">Cuidar la Postura de tus Hijos</h3><br>
+                        <p>La importancia de la alimentacion en la etapa escolar ¿Cómo debe ser el refrigerio escolar durante las clases virtuales?</p>
+                    </div>
+                </div>
+
+                <div class="consejo_ampliado">
+                    <div class="contenido_modal">
+                        <div class="consejo_ampliado_titulo">
+                            <h2>Consejos para Cuidarte Durante la Pandemia</h2>
+                            <span class="close" >&times;</span>
+                        </div>
+                        <div>
+                            <img src="img/Recomendacion3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consejo" onmouseover="ampliarConsejo2()" onmouseout="reducironsejo2()">
+                    <div>
+                        <div class="boxImg">
+                            <img src="img/Recomendacion4.jpg" alt="recomendacion" class="imgConsejo">
+                        </div>
+                        <h3 class="consejo1h3">Adultos mayores Frente al COVID-19</h3><br>
+                        <p>La importancia de la alimentacion en la etapa escolar ¿Cómo debe ser el refrigerio escolar durante las clases virtuales?</p>
+                    </div>
+                </div>
+
+                <div class="consejo_ampliado">
+                    <div class="contenido_modal">
+                        <div class="consejo_ampliado_titulo">
+                            <h2>Consejos para Cuidarte Durante la Pandemia</h2>
+                            <span class="close" >&times;</span>
+                        </div>
+                        <div>
+                            <img src="img/Recomendacion4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consejo" onmouseover="ampliarConsejo3()" onmouseout="reducironsejo3()">
+                    <div>
+                        <div class="boxImg">
+                            <img src="img/Recomendacion6.jpg" alt="recomendacion" class="imgConsejo">
+                        </div>
+                        <h3 class="consejo1h3">Como Acompañar a nuestros familiares ante un Fallecimiento</h3><br>
+                        <p>La importancia de la alimentacion en la etapa escolar ¿Cómo debe ser el refrigerio escolar durante las clases virtuales?</p>
+                    </div>
+                </div>
+
+                <div class="consejo_ampliado">
+                    <div class="contenido_modal">
+                        <div class="consejo_ampliado_titulo">
+                            <h2>Consejos para Cuidarte Durante la Pandemia</h2>
+                            <span class="close" >&times;</span>
+                        </div>
+                        <div>
+                            <img src="img/Recomendacion6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consejo" onmouseover="ampliarConsejo4()" onmouseout="reducironsejo4()">
+                    <div>
+                        <div class="boxImg">
+                            <img src="img/Recomendacion7.jpg" alt="recomendacion" class="imgConsejo">
+                        </div>
+                        <h3 class="consejo1h3">Como ayudar a tus hijos en sus clase Virtuales</h3><br>
+                        <p>La importancia de la alimentacion en la etapa escolar ¿Cómo debe ser el refrigerio escolar durante las clases virtuales?</p>
+                    </div>
+                </div>
+
+                <div class="consejo_ampliado">
+                    <div class="contenido_modal">
+                        <div class="consejo_ampliado_titulo">
+                            <h2>Consejos para Cuidarte Durante la Pandemia</h2>
+                            <span class="close" >&times;</span>
+                        </div>
+                        <div>
+                            <img src="img/Recomendacion7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consejo" onmouseover="ampliarConsejo5()" onmouseout="reducironsejo5()">
+                    <div>
+                        <div class="boxImg">
+                            <img src="img/Recomendacion8.jpg" alt="recomendacion" class="imgConsejo">
+                        </div>
+                        <h3 class="consejo1h3">Como organizarte frente al COVID-19</h3><br>
+                        <p>La importancia de la alimentacion en la etapa escolar ¿Cómo debe ser el refrigerio escolar durante las clases virtuales?</p>
+                    </div>
+                </div>
+
+                <div class="consejo_ampliado">
+                    <div class="contenido_modal">
+                        <div class="consejo_ampliado_titulo">
+                            <h2>Consejos para Cuidarte Durante la Pandemia</h2>
+                            <span class="close" >&times;</span>
+                        </div>
+                        <div>
+                            <img src="img/Recomendacion8.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+
+        </section>
+
+
+        <footer>
+            <div class = "box_footer">
+                <div class= "cajas1">
+                    <img src="img/Logo1.png" alt="logo" class="imgGob">
+                    <p class="parrafo">www.essalud.gob.pe</p>
+
+                </div>
+                <div class= "cajas2">
+                    <p>
+                        Sede Central: <br>
+                        Av. Arenales N° 1402 <br>
+                        Jesús María, Lima 11 – Perú <br>
+                        Teléfonos: <br>
+                        (511)265-6000 / (511) 265-7000
+                    </p>
+                </div>
+                <div class= "cajas3">
+                    <a href="https://bicentenario.gob.pe/">
+                        <img src="img/LogoBicentenario2.png" alt="logo" class="imgBice" onmouseover="ampliar1()" onmouseout="reducir1()">
+                    </a>
+                    <p class="parrafo">
+                        Contactenos
+                    </p>
+                    <div class="cajas4">
+
+                        <a href="https://es-la.facebook.com/">
+                            <img src="img/facebook.png" alt="facebook" class="imgLogo" onmouseover="girar1()" onmouseout="original1()">
+                        </a>
+                        <a href="https://twitter.com/?lang=es">
+                            <img src="img/twitter.png" alt="facebook" class="imgLogo" onmouseover="girar2()" onmouseout="original2()">
+                        </a>
+                        <a href="https://pe.linkedin.com/">
+                            <img src="img/linkedin.png" alt="facebook" class="imgLogo" onmouseover="girar3()" onmouseout="original3()">
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    
+</body>
+<script src="js/codigo.js"></script>
+</html>
